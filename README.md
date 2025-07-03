@@ -55,6 +55,7 @@ Bu sistemi UI’da göster, klavye ile test et, veri kaydet ve oyuna tekrar giri
 * `G` tuşuna basıldığında gem -5
 * Bu işlemler `CurrencyManager` üzerinden yapılmalı.
 * Değişiklik sonrası miktarlar konsola yazdırılmalı.
+* Hangi tuşların hangi türü etkieldiği ReadMe bölümünde belirtilmeli.
 
 ***
 
@@ -67,7 +68,13 @@ Bu sistemi UI’da göster, klavye ile test et, veri kaydet ve oyuna tekrar giri
 
 > ⚠️ ScriptableObject’lar doğrudan kaydedilemez, sadece verileri serialize edip yüklemelisin.
 
+#### Alternatif Kayıt Yöntemi
+
+İsteğe göre JSON yerine PlayerPrefs kullanılabilir.
+
 ***
+
+####
 
 #### 6. UI Görsel Geribildirim
 
