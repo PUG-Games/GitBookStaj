@@ -17,9 +17,10 @@ Bu sistemi UI’da göster, klavye ile test et, veri kaydet ve oyuna tekrar giri
 
 #### 1. Para Birimi Tanımı (ScriptableObject)
 
-* `CurrencyType` adında bir **ScriptableObject** sınıfı oluştur.
+* `CurrencyItem` adında bir **ScriptableObject** sınıfı oluştur.
+* `CurrencyType` adında bir enum oluştur.
 * Bu sınıfa aşağıdaki alanları ekle:
-  * `string id`
+  * `CurrencyType`` ``id`
   * `string displayName`
   * `Sprite icon`
   * `int currentAmount`
@@ -30,12 +31,12 @@ Bu sistemi UI’da göster, klavye ile test et, veri kaydet ve oyuna tekrar giri
 #### 2. Para Yönetim Sistemi (Currency Manager)
 
 * `CurrencyManager` adında bir sınıf oluştur.
-* Tüm `CurrencyType`'ları bir `List<CurrencyType>` içinde tut.
+* Tüm `CurrencyItem` 'ları bir `List<CurrencyItem` `>` içinde tut.
 * Aşağıdaki metodları yaz:
-  * `AddCurrency(string id, int amount)`
-  * `SubtractCurrency(string id, int amount)`
-  * `GetCurrencyAmount(string id)`
-  * `SetCurrencyAmount(string id, int amount)`
+  * `AddCurrency(CurrencyType`` ``id, int amount)`
+  * `SubtractCurrency(CurrencyType  id, int amount)`
+  * `GetCurrencyAmount(CurrencyType id)`
+  * `SetCurrencyAmount(CurrencyType id, int amount)`
 * Negatif miktara düşmeyi engelle, yoksa hata logla.
 
 ***
@@ -55,7 +56,8 @@ Bu sistemi UI’da göster, klavye ile test et, veri kaydet ve oyuna tekrar giri
 * `G` tuşuna basıldığında gem -5
 * Bu işlemler `CurrencyManager` üzerinden yapılmalı.
 * Değişiklik sonrası miktarlar konsola yazdırılmalı.
-* Hangi tuşların hangi türü etkieldiği ReadMe bölümünde belirtilmeli.
+* Tüm ekonomi birimi için test etmek üzere bir tuş atanmalı.
+* Hangi tuşların hangi türü etkilediği ReadMe bölümünde belirtilmeli.
 
 ***
 
@@ -73,8 +75,6 @@ Bu sistemi UI’da göster, klavye ile test et, veri kaydet ve oyuna tekrar giri
 İsteğe göre JSON yerine PlayerPrefs kullanılabilir.
 
 ***
-
-####
 
 #### 6. UI Görsel Geribildirim
 
